@@ -193,17 +193,90 @@ hr {
 .sou a:hover {
     text-decoration: underline;
 }
+/* Estilos generales para pantallas grandes (por defecto) */
 
 /* Responsividad */
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
     .camisetas-grid {
-        flex-direction: column;
-        gap: 30px;
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas en pantallas medianas */
+    }
+}
+
+@media (max-width: 992px) {
+    .camisetas-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas medianas */
+    }
+
+    .navbar-brand.logo img {
+        height: 40px; /* Ajustar el tamaño del logo para pantallas más pequeñas */
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 0.9rem; /* Reducir el tamaño de la fuente de la barra de navegación */
+    }
+}
+
+@media (max-width: 768px) {
+    /* Barra de navegación */
+    .navbar {
+        padding: 15px;
+    }
+
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .navbar-toggler {
+        margin-left: auto;
+    }
+
+    /* Camisetas */
+    .camisetas-grid {
+        grid-template-columns: 1fr; /* 1 columna en pantallas pequeñas */
     }
 
     .camiseta-item {
-        width: 100%;
-        max-width: 350px;
-        margin: 0 auto;
+        width: 100%; /* Hacer que los elementos ocupen todo el ancho disponible */
+    }
+
+    .camiseta-img {
+        height: 200px; /* Reducir la altura de las imágenes en pantallas pequeñas */
+    }
+
+    /* Footer */
+    .content_footer {
+        flex-direction: column; /* Apilar los elementos verticalmente en pantallas pequeñas */
+        text-align: center;
+    }
+
+    .footer_bottom {
+        flex-direction: column;
+        text-align: center;
     }
 }
+
+@media (max-width: 576px) {
+    /* Ajustes para pantallas muy pequeñas (móviles) */
+
+    .navbar-brand.logo img {
+        height: 35px; /* Reducir el logo aún más para pantallas muy pequeñas */
+    }
+
+    .camisetas-section h2 {
+        font-size: 2rem; /* Reducir el tamaño del encabezado */
+    }
+
+    .camiseta-img {
+        height: 180px; /* Ajustar la altura de las imágenes para pantallas pequeñas */
+    }
+
+    footer {
+        padding: 15px 0; /* Ajustar el padding del footer */
+    }
+
+    .social_media a {
+        font-size: 18px; /* Reducir el tamaño de los iconos de redes sociales */
+    }
+}
+
+
