@@ -66,15 +66,19 @@ body {
     position: absolute;
     top: 8.75rem;
     left: 4.6875rem;
-    color: rgba(255, 255, 255, 0.67); /* Texto blanco */
+    color: rgb(255, 255, 255); /* Texto blanco */
     font-size: 1.2rem; /* Tamaño del texto */
 }
-
+.articulos{
+    margin: 20px;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+}
 /* Sección Selección por Deportes */
 .sports-section {
     margin-right: 20px;
     margin-left: 20px;
-    background-color: #ffffff;
+
     text-align: left;
     padding: 50px;
 }
@@ -134,7 +138,7 @@ body {
 .novedades-section {
     margin-right: 20px;
     margin-left: 20px;
-    background-color: #ffffff;
+
     text-align: left;
     padding: 50px;
 }
@@ -302,6 +306,33 @@ hr {
 .sou a:hover {
     text-decoration: underline;
 }
+.messi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
+}
+
+.messi img {
+    max-width: 28%; /* Ajuste de tamaño más pequeño */
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .messi img {
+        max-width: 70%; /* Aumenta el tamaño en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .messi img {
+        max-width: 90%; /* Aún más grande en pantallas muy pequeñas */
+    }
+}
+
 
 
 /* Responsividad */
